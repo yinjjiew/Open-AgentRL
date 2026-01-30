@@ -154,6 +154,14 @@ To eval the model on OSWorld, use
 ```bash
 python osworld_eval.py config=configs/osworld_eval.yaml
 ```
+You can also evaluate with multi-nodes to accelerate.
+```
+if [[ ${MLP_ROLE_INDEX:-0} -eq 0 ]]; then   
+    python osworld_eval.py config=configs/osworld_eval.yaml
+else
+    exec tail -f /dev/null
+fi
+```
 
 
 #### Text Game (AlfWorld)
@@ -251,6 +259,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
