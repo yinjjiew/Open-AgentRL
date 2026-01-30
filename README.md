@@ -57,6 +57,7 @@ We also contribute [high-quality SFT and RL datasets](https://huggingface.co/col
 
 ## 🚀 Get Started
 
+For Open-AgentRL
 ```bash
 git clone https://github.com/Gen-Verse/Open-AgentRL.git
 conda create -n OpenAgentRL python=3.11 
@@ -64,6 +65,12 @@ conda activate OpenAgentRL
 cd Open-AgentRL
 bash scripts/install_vllm_sglang_mcore.sh
 pip install -e .[vllm]
+```
+For RLAnything
+```bash
+conda create --name rlanything python=3.10
+source activate rlanything
+pip install -r requirements_rlanything.txt
 ```
 
 ## 🔧 Training
@@ -120,6 +127,39 @@ bash recipe/demystify/grpo_tcr_qwen3_4b.sh
 ```
 
 You can observe the training dynamics and evaluation results in Weights & Biases (wandb).
+
+
+### RLAnything
+
+
+#### AlfWorld
+
+To conduct reinforcement learning or evaluation on AlfWorld, you need to first download the alfworld data with the following commands (after you have pip installed the rlanything environment)
+```bash
+alfworld-download
+```
+Then you will have a directory that contains at least `detectors`, `json_2.1.1`, and `logic`. This will be the directory to save AlfWorld environment files. Our adapted environment files will be generated under `alfworld_file_path/json_2.1.1/alfworld_rl/syn_train`. `syn_train` saves accepted environment files, while `temp_train` saves generated files which to be validated (not accept yet).
+
+Before training, you need set `alfworld_rl.yaml` in configs. The detailed instructions are within it. To start the RLAnything training, simply
+```bash
+python alfworld_rl.py config=configs/alfworld_rl.yaml
+```
+In our experiments, we train with multiple nodes:
+```
+if [[ ${MLP_ROLE_INDEX:-0} -eq 0 ]]; then   
+    python alfworld_rl.py config=configs/alfworld_rl.yaml
+else
+    exec tail -f /dev/null
+fi
+# directly submit this to head machine
+```
+
+To eval the model on AlfWorld, use
+```bash
+python alfworld_eval.py config=configs/alfworld_eval.yaml
+```
+
+
 
 ## 📊 Evaluation
 
@@ -187,6 +227,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
