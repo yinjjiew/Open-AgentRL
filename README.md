@@ -132,9 +132,9 @@ You can observe the training dynamics and evaluation results in Weights & Biases
 ### RLAnything
 
 
-#### AlfWorld
+#### Text Game (AlfWorld)
 
-To conduct reinforcement learning or evaluation on AlfWorld, you need to first download the alfworld data with the following commands (after you have pip installed the rlanything environment)
+To conduct reinforcement learning or evaluation on AlfWorld, you need to first download the AlfWorld data with the following commands (after you have pip installed the rlanything environment)
 ```bash
 alfworld-download
 ```
@@ -227,6 +227,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
