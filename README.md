@@ -132,6 +132,30 @@ You can observe the training dynamics and evaluation results in Weights & Biases
 ### RLAnything
 
 
+#### Computer Control (OSWorld)
+
+Our reinforcement learning and evaluation pipeline for OSWorld is built on a pool of virtual machines running in parallel on cloud instances. Specifically, we use Volcengine Cloud in our experiments. Before training, you need to set up the security group and VM image on Volcengine following [these instructions](https://github.com/xlang-ai/OSWorld/blob/main/desktop_env/providers/volcengine/VOLCENGINE_GUIDELINE_CN.md).
+
+Before training, you need set `osworld_rl.yaml` in configs. The detailed instructions are within it. To start the RLAnything training, simply
+```bash
+python osworld_rl.py config=configs/osworld_rl.yaml
+```
+In our experiments, we train with multiple nodes:
+```
+if [[ ${MLP_ROLE_INDEX:-0} -eq 0 ]]; then   
+    python osworld_rl.py config=configs/osworld_rl.yaml
+else
+    exec tail -f /dev/null
+fi
+# directly submit this to head machine
+```
+
+To eval the model on OSWorld, use
+```bash
+python osworld_eval.py config=configs/osworld_eval.yaml
+```
+
+
 #### Text Game (AlfWorld)
 
 To conduct reinforcement learning or evaluation on AlfWorld, you need to first download the AlfWorld data with the following commands (after you have pip installed the rlanything environment)
@@ -227,6 +251,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
