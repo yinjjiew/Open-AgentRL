@@ -39,9 +39,11 @@
 
 
 
-
-
-<h3>Demystifying Reinforcement Learning in Agentic Reasoning</h3></div>
+<div align="center">
+  <h3>
+    Demystifying Reinforcement Learning in Agentic Reasoning
+  </h3>
+</div>
 
 
 <p align="center">
@@ -338,6 +340,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
