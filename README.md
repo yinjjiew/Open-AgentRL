@@ -25,6 +25,8 @@
 
 ## Introduction
 
+<table class="center">     <tr>     <td width=100% style="border: none"><img src="figs/rlanythingoverview.png" style="width:100%"></td>     </tr>     <tr>     <td width="100%" style="border: none; text-align: center; word-wrap: break-word">An overview of our research on RLAnything. </td>   </tr> </table>
+
 <table class="center">     <tr>     <td width=100% style="border: none"><img src="figs/overview.png" style="width:100%"></td>     </tr>     <tr>     <td width="100%" style="border: none; text-align: center; word-wrap: break-word">An overview of our research on agentic RL. </td>   </tr> </table>
 
 In this work, we systematically investigate three dimensions of agentic RL: **data, algorithms, and reasoning modes**. Our findings reveal: 
@@ -284,6 +286,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
