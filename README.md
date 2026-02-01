@@ -139,9 +139,10 @@ Our reinforcement learning and evaluation pipeline for OSWorld is built on a poo
 Before training, you need set `osworld_rl.yaml` in configs. The detailed instructions are within it. To start the RLAnything training, simply
 ```bash
 python osworld_rl.py config=configs/osworld_rl.yaml
+# you need to set num_node in osworld_rl.yaml to 1 if you only use one node.
 ```
 In our experiments, we train with multiple nodes:
-```
+```bash
 if [[ ${MLP_ROLE_INDEX:-0} -eq 0 ]]; then   
     python osworld_rl.py config=configs/osworld_rl.yaml
 else
@@ -155,7 +156,7 @@ To eval the model on OSWorld, use
 python osworld_eval.py config=configs/osworld_eval.yaml
 ```
 You can also evaluate with multi-nodes to accelerate.
-```
+```bash
 if [[ ${MLP_ROLE_INDEX:-0} -eq 0 ]]; then   
     python osworld_eval.py config=configs/osworld_eval.yaml
 else
@@ -175,9 +176,10 @@ Then you will have a directory that contains at least `detectors`, `json_2.1.1`,
 Before training, you need set `alfworld_rl.yaml` in configs. The detailed instructions are within it. To start the RLAnything training, simply
 ```bash
 python alfworld_rl.py config=configs/alfworld_rl.yaml
+# you need to set num_node in alfworld_rl.yaml to 1 if you only use one node.
 ```
 In our experiments, we train with multiple nodes:
-```
+```bash
 if [[ ${MLP_ROLE_INDEX:-0} -eq 0 ]]; then   
     python alfworld_rl.py config=configs/alfworld_rl.yaml
 else
@@ -190,6 +192,29 @@ To eval the model on AlfWorld, use
 ```bash
 python alfworld_eval.py config=configs/alfworld_eval.yaml
 ```
+
+#### Coding
+
+You need to first download the training and evaluation dataset. Simply open `./data` and follow the instructions to do so. Then you can start the training with
+```bash
+python coding_rl.py config=configs/coding_rl.yaml
+# you need to set num_node in coding_rl.yaml to 1 if you only use one node.
+```
+In our experiments, we train on 4 nodes
+```bash
+if [[ ${MLP_ROLE_INDEX:-0} -eq 0 ]]; then   
+    python coding_rl.py config=configs/coding_rl.yaml
+else
+    exec tail -f /dev/null
+fi
+```
+For evaluation, simply
+```bash
+python coding_eval.py config=configs/coding_eval.yaml
+```
+
+
+
 
 
 
@@ -259,6 +284,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
