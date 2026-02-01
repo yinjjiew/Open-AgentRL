@@ -34,7 +34,8 @@
 
 
 
-
+<details>
+  <summary><b>Overview (click to expand)</b></summary>
 
 
 <h3>Demystifying Reinforcement Learning in Agentic Reasoning</h3></div>
@@ -71,6 +72,11 @@ In this work, we systematically investigate three dimensions of agentic RL: **da
 * Real end-to-end trajectories and high-diversity datasets significantly outperform synthetic alternatives; 
 * Exploration-friendly techniques like reward clipping and entropy maintenance boost training efficiency; 
 * Deliberative reasoning with selective tool calls surpasses frequent invocation or verbose self-reasoning. 
+
+
+
+</details>
+
 
 We also contribute [high-quality SFT and RL datasets](https://huggingface.co/collections/Gen-Verse/open-agentrl-68eda4c05755ca5a8c663656), demonstrating that **simple recipes enable even [4B models](https://huggingface.co/Gen-Verse/DemyAgent-4B) to outperform 32B models** on challenging benchmarks including AIME2024/2025, GPQA-Diamond, and LiveCodeBench-v6.
 
@@ -330,6 +336,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
