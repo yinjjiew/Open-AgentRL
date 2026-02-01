@@ -25,10 +25,12 @@
 
 ## Introduction
 
-<h3 style="width:100%; display:block; text-align:center !important; margin:0;">
-  RLAnything: Forge Environment, Policy, and Reward Model<br>
-  in Completely Dynamic RL System
-</h3>
+<div style="display:flex; justify-content:center; width:100%;">
+  <h3 style="text-align:center; margin:0;">
+    RLAnything: Forge Environment, Policy, and Reward Model<br>
+    in Completely Dynamic RL System
+  </h3>
+</div>
 
 <p align="center">
   <a href="https://arxiv.org/abs/2510.11701">
@@ -311,6 +313,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
