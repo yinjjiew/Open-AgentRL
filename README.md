@@ -26,7 +26,7 @@
         alt="DemyAgent-4B on Hugging Face"
     />
   </a>
-  <a href="https://yinjjiew.github.io/projects/dllmrl/">
+  <a href="https://yinjjiew.github.io/projects/rlanything/">
     <img
       src="https://img.shields.io/badge/Blog-RLAnything-blue?logo=rss&logoColor=white"
       alt="Blog"
@@ -347,6 +347,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
