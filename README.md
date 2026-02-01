@@ -25,6 +25,22 @@
 
 ## Introduction
 
+<h3>RLAnything: Forge Environment, Policy, and Reward Model in Completely Dynamic RL System</h3></div>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2510.11701">
+    <img
+      src="https://img.shields.io/badge/Paper-Arxiv%202510.11701-red?logo=arxiv&logoColor=red"
+      alt="Paper on arXiv"
+    />
+  <a href="https://huggingface.co/Gen-Verse/DemyAgent-4B">
+    <img 
+        src="https://img.shields.io/badge/Models-Policy%20&%20Reward-FFCC00?logo=huggingface&logoColor=yellow" 
+        alt="DemyAgent-4B on Hugging Face"
+    />
+  </a>
+</p>
+    
 <table class="center">     <tr>     <td width=100% style="border: none"><img src="figs/rlanythingoverview.png" style="width:100%"></td>     </tr>     <tr>     <td width="100%" style="border: none; text-align: center; word-wrap: break-word">An overview of our research on RLAnything. </td>   </tr> </table>
 
 <table class="center">     <tr>     <td width=100% style="border: none"><img src="figs/overview.png" style="width:100%"></td>     </tr>     <tr>     <td width="100%" style="border: none; text-align: center; word-wrap: break-word">An overview of our research on agentic RL. </td>   </tr> </table>
@@ -292,6 +308,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
