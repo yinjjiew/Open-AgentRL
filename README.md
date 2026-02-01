@@ -39,11 +39,7 @@
 
 
 
-<div align="center">
-  <h3>
-    Demystifying Reinforcement Learning in Agentic Reasoning
-  </h3>
-</div>
+<h3>Demystifying Reinforcement Learning in Agentic Reasoning</h3></div>
 
 
 <p align="center">
