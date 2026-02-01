@@ -59,13 +59,13 @@ We also contribute [high-quality SFT and RL datasets](https://huggingface.co/col
 
 ## 🚩 New Updates
 
-- **[2026.2]** We fully open-source our work RLAnything, including:
+- **[2026.2]** We fully open-source our work **RLAnything**, including:
   - Training code across GUI Agent, LLM Agent, and Coding LLM settings.
   - Model checkpoints: both the policy and reward models across these settings.
   - Evaluation Scripts for our models 
 
 
-- **[2025.10]** We fully open-source our work Open-AgentRL, including:
+- **[2025.10]** We fully open-source our work **Open-AgentRL**, including:
   - Training code for both SFT and RL stages
   - High-quality SFT dataset (3K samples) and RL dataset (30K samples)
   - Model checkpoints: SFT models (Qwen2.5-7B-RA-SFT, Qwen3-4B-RA-SFT) and RL-trained model ([DemyAgent-4B](https://huggingface.co/Gen-Verse/DemyAgent-4B))
@@ -313,6 +313,7 @@ As demonstrated in the table above, despite having only 4B parameters, **DemyAge
 ## 🙏 Acknowledgements
 
 This work aims to explore more efficient paradigms for Agentic RL. Our implementation builds upon the excellent codebases of [VeRL](https://github.com/volcengine/verl) and [ReTool](https://github.com/ReTool-RL/ReTool). We sincerely thank these projects for their valuable insights and high-quality implementations, which have greatly facilitated our research.
+
 
 
 
